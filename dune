@@ -1,0 +1,13 @@
+(library
+ (name classgroup)
+ (libraries
+  zarith)
+ (modules classgroup))
+
+(executable
+ (name main)
+ (libraries
+  classgroup
+  zarith)
+ (modules
+  main))

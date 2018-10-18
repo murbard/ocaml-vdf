@@ -1,0 +1,12 @@
+(executables
+ (names test_classgroup)
+ (libraries  classgroup
+             alcotest))
+
+(alias
+ (name buildtest)
+ (deps test_classgroup.exe))
+
+(alias
+ (name runtest_classgroup)
+ (action (run %{exe:test_classgroup.exe})))
