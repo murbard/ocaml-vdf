@@ -90,7 +90,7 @@ let test_many_generators () =
     Printf.printf "discriminant = %d; group order = %d" (Z.to_int d) (List.length p0)
   done
 
-let test_idendity () =
+let test_identity () =
   for i = 0 to 999 do
     let d = Z.of_int (-7 - i * 8) in
     let e_id = Classgroup.identity_for_discriminant d in
@@ -134,6 +134,7 @@ let tests = [
   "test_generator_element", `Quick, test_generator_element ;
   "test_many_generators", `Quick, test_many_generators ;
   "test_inverse", `Quick, test_inverse ;
+  "test_identity", `Quick, test_identity ;
   "test_bad_multiply", `Quick, test_bad_multiply ;
   "test_pow", `Quick, test_pow ;
 ]
